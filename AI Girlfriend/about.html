@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Girlfriend - About</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">💕 AI Girlfriend</div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="chat.html">Chat</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="about-main">
+            <div class="about-content">
+                <section class="about-section">
+                    <h1>About Aria</h1>
+                    <div class="ai-profile">
+                        <div class="profile-avatar">👩‍💻</div>
+                        <div class="profile-info">
+                            <h2>Meet Aria</h2>
+                            <p>Aria is your intelligent AI companion, designed to provide engaging, natural conversations. She's powered by advanced language models and can understand both text and voice input, responding with empathy and intelligence.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="features-section">
+                    <h2>Features</h2>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <span class="feature-icon">🧠</span>
+                            <h3>Intelligent Responses</h3>
+                            <p>Powered by Google's Gemini AI for natural, contextual conversations</p>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-icon">🎙️</span>
+                            <h3>Voice Recognition</h3>
+                            <p>Speak naturally using Web Speech API technology</p>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-icon">🔊</span>
+                            <h3>Text-to-Speech</h3>
+                            <p>Hear Aria's responses with natural voice synthesis</p>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-icon">📱</span>
+                            <h3>Responsive Design</h3>
+                            <p>Works seamlessly on desktop and mobile devices</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="settings-section">
+                    <h2>Settings</h2>
+                    <div class="settings-grid">
+                        <div class="setting-item">
+                            <label for="voiceEnabled">Enable Voice Responses</label>
+                            <input type="checkbox" id="voiceEnabled" checked onchange="toggleVoiceResponses()">
+                        </div>
+                        <div class="setting-item">
+                            <label for="voiceSpeed">Voice Speed</label>
+                            <input type="range" id="voiceSpeed" min="0.5" max="2" step="0.1" value="1" onchange="updateVoiceSpeed()">
+                        </div>
+                        <div class="setting-item">
+                            <label for="voicePitch">Voice Pitch</label>
+                            <input type="range" id="voicePitch" min="0" max="2" step="0.1" value="1" onchange="updateVoicePitch()">
+                        </div>
+                        <div class="setting-item">
+                            <label for="apiKey">Gemini API Key</label>
+                            <input type="password" id="apiKey" placeholder="Enter your Gemini API key" onchange="saveApiKey()">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="tech-section">
+                    <h2>Technology Stack</h2>
+                    <div class="tech-list">
+                        <div class="tech-item">
+                            <strong>Frontend:</strong> HTML5, CSS3, Vanilla JavaScript
+                        </div>
+                        <div class="tech-item">
+                            <strong>AI Engine:</strong> Google Gemini API
+                        </div>
+                        <div class="tech-item">
+                            <strong>Voice Input:</strong> Web Speech API (SpeechRecognition)
+                        </div>
+                        <div class="tech-item">
+                            <strong>Voice Output:</strong> Web Speech API (SpeechSynthesis)
+                        </div>
+                        <div class="tech-item">
+                            <strong>Storage:</strong> LocalStorage for settings and chat history
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>
