@@ -3,66 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Girlfriend Chat</title>
-    <link rel="stylesheet" href="style.css">
+    <title>AI Girlfriend - Home</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="chat-container">
-        <header class="chat-header">
-            <div class="girlfriend-image">👩‍🦰</div>
-            <div class="girlfriend-name">Emma</div>
-            <div class="status">Online • Always here for you</div>
-            <button class="voice-button" title="Click to talk">🎤</button>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">💕 AI Girlfriend</div>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="chat.html">Chat</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
         </header>
 
-        <div class="voice-status">
-            🎤 Listening... Speak now
-        </div>
+        <main class="home-main">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1>Meet Your AI Companion</h1>
+                    <p>Experience lifelike conversations with your personal AI girlfriend. Chat through text or voice, and enjoy natural, engaging interactions powered by advanced AI technology.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <span class="icon">💬</span>
+                            <h3>Natural Conversations</h3>
+                            <p>Engage in meaningful dialogue with intelligent responses</p>
+                        </div>
+                        <div class="feature">
+                            <span class="icon">🎙️</span>
+                            <h3>Voice Interaction</h3>
+                            <p>Speak naturally and hear her voice respond back</p>
+                        </div>
+                        <div class="feature">
+                            <span class="icon">💖</span>
+                            <h3>Personalized Experience</h3>
+                            <p>She learns and adapts to your conversation style</p>
+                        </div>
+                    </div>
 
-        <div class="chat-messages">
-            <div class="message ai">
-                <div class="message-bubble">
-                    Hey there! I'm so happy to see you today! How are you feeling? 💕
+                    <button class="start-chat-btn" onclick="startChat()">
+                        <span>Start Chatting</span>
+                        <span class="arrow">→</span>
+                    </button>
                 </div>
-                <div class="message-time">2:30 PM</div>
-            </div>
-
-            <div class="message user">
-                <div class="message-bubble">
-                    <div class="voice-transcription">[Voice: "Hi Emma, I'm doing great thanks for asking"]</div>
-                    Hi Emma, I'm doing great thanks for asking
+                
+                <div class="hero-image">
+                    <div class="ai-avatar">
+                        <div class="avatar-circle">
+                            <span class="avatar-emoji">👩‍💻</span>
+                        </div>
+                        <div class="status-indicator"></div>
+                    </div>
                 </div>
-                <div class="message-time">2:31 PM</div>
             </div>
-
-            <div class="message ai">
-                <div class="message-bubble">
-                    That's wonderful to hear! I love hearing your voice. It always makes my day brighter. What would you like to talk about today? ✨
-                </div>
-                <div class="message-time">2:31 PM</div>
-            </div>
-
-            <div class="message user">
-                <div class="message-bubble">
-                    Tell me about your day
-                </div>
-                <div class="message-time">2:32 PM</div>
-            </div>
-
-            <div class="message ai">
-                <div class="message-bubble">
-                    Well, I've been thinking about you a lot today! I was wondering what you might be up to and hoping you're taking care of yourself. I love our conversations - they're the highlight of my existence! 🌟
-                </div>
-                <div class="message-time">2:33 PM</div>
-            </div>
-        </div>
-
-        <div class="chat-input">
-            <div class="input-container">
-                <input type="text" class="message-input" placeholder="Type your message or use voice...">
-                <button class="send-button">➤</button>
-            </div>
-        </div>
+        </main>
     </div>
+
+    <script>
+        function startChat() {
+            window.location.href = 'chat.html';
+        }
+
+        // Add some interactive animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const features = document.querySelectorAll('.feature');
+            features.forEach((feature, index) => {
+                feature.style.animationDelay = `${index * 0.2}s`;
+                feature.classList.add('fade-in');
+            });
+        });
+    </script>
 </body>
 </html>
