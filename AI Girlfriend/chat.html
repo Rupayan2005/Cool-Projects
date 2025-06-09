@@ -1,64 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Girlfriend - Chat</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <nav>
-                <div class="logo">💕 AI Girlfriend</div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="chat.html" class="active">Chat</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </nav>
-        </header>
+      <header>
+        <nav>
+          <div class="logo">💕 AI Girlfriend</div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chat.html" class="active">Chat</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </header>
 
-        <main class="chat-main">
-            <div class="chat-container">
-                <div class="chat-header">
-                    <div class="chat-user-info">
-                        <div class="user-avatar">👩‍💻</div>
-                        <div class="user-details">
-                            <h3>Aria</h3>
-                            <span class="status">Online</span>
-                        </div>
-                    </div>
-                    <div class="chat-actions">
-                        <button class="clear-chat" onclick="clearChat()">🗑️</button>
-                    </div>
-                </div>
-
-                <div class="chat-messages" id="chatMessages">
-                    <div class="message ai-message">
-                        <div class="message-content">
-                            <p>Hi there! I'm Aria, your AI companion. I'm so excited to chat with you! You can type to me or use the microphone button to speak. How are you feeling today? 💕</p>
-                            <span class="message-time">Just now</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="chat-input-container">
-                    <div class="input-wrapper">
-                        <button class="voice-btn" id="voiceBtn" onclick="toggleVoiceInput()">
-                            <span class="mic-icon">🎙️</span>
-                        </button>
-                        <input type="text" id="messageInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
-                        <button class="send-btn" onclick="sendMessage()">
-                            <span>Send</span>
-                        </button>
-                    </div>
-                    <div class="voice-status" id="voiceStatus"></div>
-                </div>
+      <main class="chat-main">
+        <div class="chat-container">
+          <div class="chat-header">
+            <div class="chat-user-info">
+              <div class="user-avatar">
+                <img
+                  src="/AI Girlfriend/ai girl.webp"
+                  alt="AI Girlfriend"
+                  width="60"
+                  height="60"
+                  style="border-radius: 50%; object-fit: cover"
+                />
+              </div>
+              <div class="user-details">
+                <h3>Aria</h3>
+                <span class="status">Online</span>
+              </div>
             </div>
-        </main>
+            <div class="chat-actions">
+              <button class="clear-chat" onclick="clearChat()">🗑️</button>
+            </div>
+          </div>
+
+          <div class="chat-messages" id="chatMessages">
+            <div class="message ai-message">
+              <div class="message-content">
+                <p>
+                  Hi there! I'm Aria, your AI companion. I'm so excited to chat
+                  with you! You can type to me or use the microphone button to
+                  speak. How are you feeling today? 💕
+                </p>
+                <span class="message-time">Just now</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-input-container">
+            <div class="input-wrapper">
+              <button
+                class="voice-btn"
+                id="voiceBtn"
+                onclick="toggleVoiceInput()"
+              >
+                <span class="mic-icon">🎙️</span>
+              </button>
+              <input
+                type="text"
+                id="messageInput"
+                placeholder="Type your message..."
+                onkeypress="handleKeyPress(event)"
+              />
+              <button class="send-btn" onclick="sendMessage()">
+                <span>Send</span>
+              </button>
+            </div>
+            <div class="voice-status" id="voiceStatus"></div>
+          </div>
+        </div>
+      </main>
     </div>
 
     <script src="chat.js"></script>
-</body>
+  </body>
 </html>

@@ -1,79 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Girlfriend - Home</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <nav>
-                <div class="logo">💕 AI Girlfriend</div>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="chat.html">Chat</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </nav>
-        </header>
+      <header>
+        <nav>
+          <div class="logo">💕 AI Girlfriend</div>
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="chat.html">Chat</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </header>
 
-        <main class="home-main">
-            <div class="hero-section">
-                <div class="hero-content">
-                    <h1>Meet Your AI Companion</h1>
-                    <p>Experience lifelike conversations with your personal AI girlfriend. Chat through text or voice, and enjoy natural, engaging interactions powered by advanced AI technology.</p>
-                    
-                    <div class="features">
-                        <div class="feature">
-                            <span class="icon">💬</span>
-                            <h3>Natural Conversations</h3>
-                            <p>Engage in meaningful dialogue with intelligent responses</p>
-                        </div>
-                        <div class="feature">
-                            <span class="icon">🎙️</span>
-                            <h3>Voice Interaction</h3>
-                            <p>Speak naturally and hear her voice respond back</p>
-                        </div>
-                        <div class="feature">
-                            <span class="icon">💖</span>
-                            <h3>Personalized Experience</h3>
-                            <p>She learns and adapts to your conversation style</p>
-                        </div>
-                    </div>
+      <main class="home-main">
+        <div class="hero-section">
+          <div class="hero-content">
+            <h1>Meet Your AI Companion</h1>
+            <p>
+              Experience lifelike conversations with your personal AI
+              girlfriend. Chat through text or voice, and enjoy natural,
+              engaging interactions powered by advanced AI technology.
+            </p>
 
-                    <button class="start-chat-btn" onclick="startChat()">
-                        <span>Start Chatting</span>
-                        <span class="arrow">→</span>
-                    </button>
-                </div>
-                
-                <div class="hero-image">
-                    <div class="ai-avatar">
-                        <div class="avatar-circle">
-                            <span class="avatar-emoji">👩‍💻</span>
-                        </div>
-                        <div class="status-indicator"></div>
-                    </div>
-                </div>
+            <div class="features">
+              <div class="feature">
+                <span class="icon">💬</span>
+                <h3>Natural Conversations</h3>
+                <p>Engage in meaningful dialogue with intelligent responses</p>
+              </div>
+              <div class="feature">
+                <span class="icon">🎙️</span>
+                <h3>Voice Interaction</h3>
+                <p>Speak naturally and hear her voice respond back</p>
+              </div>
+              <div class="feature">
+                <span class="icon">💖</span>
+                <h3>Personalized Experience</h3>
+                <p>She learns and adapts to your conversation style</p>
+              </div>
             </div>
-        </main>
+
+            <button class="start-chat-btn" onclick="startChat()">
+              <span>Start Chatting</span>
+              <span class="arrow">→</span>
+            </button>
+          </div>
+
+          <div class="hero-image">
+            <div class="ai-avatar">
+              <div class="avatar-circle">
+                <span class="avatar-emoji">
+                  <img
+                    src="/AI Girlfriend/ai girl.webp"
+                    alt="AI Girlfriend"
+                    width="220"
+                    height="220"
+                    style="border-radius: 50%; object-fit: cover"
+                  />
+                </span>
+              </div>
+              <div class="status-indicator"></div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
 
     <script>
-        function startChat() {
-            window.location.href = 'chat.html';
-        }
+      function startChat() {
+        window.location.href = "chat.html";
+      }
 
-        // Add some interactive animations
-        document.addEventListener('DOMContentLoaded', function() {
-            const features = document.querySelectorAll('.feature');
-            features.forEach((feature, index) => {
-                feature.style.animationDelay = `${index * 0.2}s`;
-                feature.classList.add('fade-in');
-            });
+      // Add some interactive animations
+      document.addEventListener("DOMContentLoaded", function () {
+        const features = document.querySelectorAll(".feature");
+        features.forEach((feature, index) => {
+          feature.style.animationDelay = `${index * 0.2}s`;
+          feature.classList.add("fade-in");
         });
+      });
     </script>
-</body>
+  </body>
 </html>
