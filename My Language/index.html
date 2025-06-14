@@ -1,106 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Programming Language</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1>My Programming Language Compiler</h1>
-            <p>A simple language with variable declarations and print statements</p>
-        </header>
+      <header>
+        <h1>My Programming Language Compiler</h1>
+        <p>A simple language with variable declarations and print statements</p>
+      </header>
 
-        <div class="main-content">
-            <div class="left-panel">
-                <div class="syntax-guide">
-                    <h2>📖 Syntax Reference</h2>
-                    
-                    <div class="syntax-section">
-                        <h3>Variable Declaration</h3>
-                        <div class="syntax-example">
-                            <code>eta variableName = value</code>
-                        </div>
-                        <p>Declares a variable with a name and assigns it a value.</p>
-                        <div class="examples">
-                            <strong>Examples:</strong><br>
-                            <code>eta x = 10</code><br>
-                            <code>eta name = "John"</code><br>
-                            <code>eta sum = x + y</code>
-                        </div>
-                    </div>
+      <div class="main-content">
+        <div class="left-panel">
+          <div class="syntax-guide">
+            <h2>📖 Syntax Reference</h2>
 
-                    <div class="syntax-section">
-                        <h3>Print Statement</h3>
-                        <div class="syntax-example">
-                            <code>lekh expression</code>
-                        </div>
-                        <p>Prints a value, variable, or string to the output.</p>
-                        <div class="examples">
-                            <strong>Examples:</strong><br>
-                            <code>lekh x</code><br>
-                            <code>lekh "Hello World"</code><br>
-                            <code>lekh sum</code>
-                        </div>
-                    </div>
-
-                    <div class="syntax-section">
-                        <h3>Supported Data Types</h3>
-                        <ul>
-                            <li><strong>Numbers:</strong> <code>10, 25, 100</code></li>
-                            <li><strong>Strings:</strong> <code>"Hello", "World"</code></li>
-                            <li><strong>Variables:</strong> <code>x, y, name</code></li>
-                            <li><strong>Expressions:</strong> <code>x + y, a - b</code></li>
-                        </ul>
-                    </div>
-
-                    <div class="syntax-section">
-                        <h3>Operators</h3>
-                        <ul>
-                            <li><code>=</code> Assignment</li>
-                            <li><code>+</code> Addition</li>
-                            <li><code>-</code> Subtraction</li>
-                            <li><code>*</code> Multiplication</li>
-                            <li><code>/</code> Division</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="syntax-section">
+              <h3>Variable Declaration</h3>
+              <div class="syntax-example">
+                <code>eta variableName = value</code>
+              </div>
+              <p>Declares a variable with a name and assigns it a value.</p>
+              <div class="examples">
+                <strong>Examples:</strong><br />
+                <code>eta x = 10</code><br />
+                <code>eta name = "John"</code><br />
+                <code>eta sum = x + y</code>
+              </div>
             </div>
 
-            <div class="right-panel">
-                <div class="code-editor">
-                    <h2>💻 Code Editor</h2>
-                    <textarea id="codeInput" placeholder="Write your code here...
+            <div class="syntax-section">
+              <h3>Print Statement</h3>
+              <div class="syntax-example">
+                <code>lekh expression</code>
+              </div>
+              <p>Prints a value, variable, or string to the output.</p>
+              <div class="examples">
+                <strong>Examples:</strong><br />
+                <code>lekh x</code><br />
+                <code>lekh "Hello World"</code><br />
+                <code>lekh sum</code>
+              </div>
+            </div>
+
+            <div class="syntax-section">
+              <h3>Supported Data Types</h3>
+              <ul>
+                <li><strong>Numbers:</strong> <code>10, 25, 100</code></li>
+                <li><strong>Strings:</strong> <code>"Hello", "World"</code></li>
+                <li><strong>Variables:</strong> <code>x, y, name</code></li>
+                <li><strong>Expressions:</strong> <code>x + y, a - b</code></li>
+              </ul>
+            </div>
+
+            <div class="syntax-section">
+              <h3>Operators</h3>
+              <ul>
+                <li><code>=</code> Assignment</li>
+                <li><code>+</code> Addition</li>
+                <li><code>-</code> Subtraction</li>
+                <li><code>*</code> Multiplication</li>
+                <li><code>/</code> Division</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-panel">
+          <div class="code-editor">
+            <h2>💻 Code Editor</h2>
+            <textarea
+              id="codeInput"
+              placeholder='Write your code here...
 
 Example:
 eta x = 10
 eta y = 20
 eta sum = x + y
-eta message = &quot;Hello World&quot;
+eta message = "Hello World"
 
 lekh sum
-lekh &quot;The result is:&quot;
-lekh message"></textarea>
-                    
-                    <div class="button-container">
-                        <button onclick="executeCode()" class="run-btn">▶️ Run Code</button>
-                        <button onclick="clearCode()" class="clear-btn">🗑️ Clear</button>
-                        <button onclick="runExample()" class="example-btn">📝 Load Example</button>
-                    </div>
-                </div>
+lekh "The result is:"
+lekh message'
+            ></textarea>
 
-                <div class="output-section">
-                    <h2>📤 Output</h2>
-                    <div id="output" class="output-display">
-                        Click "Run Code" to see the output here...
-                    </div>
-                </div>
+            <div class="button-container">
+              <button onclick="executeCode()" class="run-btn">
+                ▶️ Run Code
+              </button>
+              <button onclick="clearCode()" class="clear-btn">🗑️ Clear</button>
+              <button onclick="runExample()" class="example-btn">
+                📝 Load Example
+              </button>
             </div>
+          </div>
+
+          <div class="output-section">
+            <h2>📤 Output</h2>
+            <div id="output" class="output-display">
+              Click "Run Code" to see the output here...
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <script src="compile.js"></script>
-</body>
+  </body>
 </html>

@@ -84,7 +84,11 @@ function parser(tokens) {
         name: tokens.shift().value,
         value: null,
       };
-      if (tokens[0] && tokens[0].type === "OPERATOR" && tokens[0].value === "=") {
+      if (
+        tokens[0] &&
+        tokens[0].type === "OPERATOR" &&
+        tokens[0].value === "="
+      ) {
         tokens.shift();
         let expression = "";
         while (tokens.length > 0 && tokens[0].type !== "KEYWORD") {
@@ -152,18 +156,18 @@ function runner(input, outputCallback) {
     const originalLog = console.log;
     const outputs = [];
     console.log = (...args) => {
-      outputs.push(args.map(arg => String(arg)).join(' '));
+      outputs.push(args.map((arg) => String(arg)).join(" "));
     };
-    
+
     // Use Function constructor instead of eval for safer execution
     const func = new Function(input);
     func();
-    
+
     // Restore original console.log
     console.log = originalLog;
-    
+
     if (outputCallback) {
-      outputCallback(outputs.join('\n'));
+      outputCallback(outputs.join("\n"));
     }
   } catch (error) {
     // Restore original console.log in case of error
@@ -176,34 +180,39 @@ function runner(input, outputCallback) {
 
 // Frontend integration functions
 function executeCode() {
-  const codeInput = document.getElementById('codeInput');
-  const outputDiv = document.getElementById('output');
-  
+  const codeInput = document.getElementById("codeInput");
+  const outputDiv = document.getElementById("output");
+
   if (!codeInput || !outputDiv) {
-    console.error('HTML elements not found. Make sure codeInput and output elements exist.');
+    console.error(
+      "HTML elements not found. Make sure codeInput and output elements exist."
+    );
     return;
   }
-  
+
   const code = codeInput.value;
-  
+
   if (!code.trim()) {
-    outputDiv.innerHTML = '<span style="color: #e74c3c;">Please enter some code to execute.</span>';
+    outputDiv.innerHTML =
+      '<span style="color: #e74c3c;">Please enter some code to execute.</span>';
     return;
   }
-  
+
   // Show loading state
-  outputDiv.innerHTML = '<span style="color: #f39c12;">⏳ Compiling and executing...</span>';
-  
+  outputDiv.innerHTML =
+    '<span style="color: #f39c12;">⏳ Compiling and executing...</span>';
+
   // Small delay to show loading state
   setTimeout(() => {
     const result = compiler(code);
-    
+
     if (result.success) {
       runner(result.code, (output) => {
         if (output) {
           outputDiv.innerHTML = `<span style="color: #27ae60; font-weight: bold;">✅ Success!</span><br><pre>${output}</pre>`;
         } else {
-          outputDiv.innerHTML = '<span style="color: #f39c12;">⚠️ Code executed successfully but produced no output.</span>';
+          outputDiv.innerHTML =
+            '<span style="color: #f39c12;">⚠️ Code executed successfully but produced no output.</span>';
         }
       });
     } else {
@@ -213,20 +222,20 @@ function executeCode() {
 }
 
 function clearCode() {
-  const codeInput = document.getElementById('codeInput');
-  const outputDiv = document.getElementById('output');
-  
+  const codeInput = document.getElementById("codeInput");
+  const outputDiv = document.getElementById("output");
+
   if (codeInput) {
-    codeInput.value = '';
+    codeInput.value = "";
   }
-  
+
   if (outputDiv) {
     outputDiv.innerHTML = 'Click "Run Code" to see the output here...';
   }
 }
 
 function runExample() {
-  const codeInput = document.getElementById('codeInput');
+  const codeInput = document.getElementById("codeInput");
   const exampleCode = `eta x = 10
 eta y = 20
 eta sum = x + y
@@ -235,7 +244,7 @@ eta message = "Hello World"
 lekh sum
 lekh "The result is:"
 lekh message`;
-  
+
   if (codeInput) {
     codeInput.value = exampleCode;
     executeCode();
