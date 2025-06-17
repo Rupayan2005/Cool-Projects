@@ -47,6 +47,52 @@
             </div>
 
             <div class="syntax-section">
+              <h3>If-Else Statements</h3>
+              <div class="syntax-example">
+                <code>jodi condition { ... } nahole { ... }</code>
+              </div>
+              <p>Conditional execution based on a condition.</p>
+              <div class="examples">
+                <strong>Example:</strong><br />
+                <code>eta age = 18</code><br />
+                <code>jodi age >= 18 {</code><br />
+                <code>&nbsp;&nbsp;lekh "Adult"</code><br />
+                <code>} nahole {</code><br />
+                <code>&nbsp;&nbsp;lekh "Minor"</code><br />
+                <code>}</code>
+              </div>
+            </div>
+
+            <div class="syntax-section">
+              <h3>Loops</h3>
+              <div class="syntax-example">
+                <code>chalao var theke start porjonto end { ... }</code>
+              </div>
+              <p>For loop that iterates from start to end value.</p>
+              <div class="examples">
+                <strong>Example:</strong><br />
+                <code>chalao i theke 1 porjonto 5 {</code><br />
+                <code>&nbsp;&nbsp;lekh "Number:"</code><br />
+                <code>&nbsp;&nbsp;lekh i</code><br />
+                <code>}</code>
+              </div>
+            </div>
+
+            <div class="syntax-section">
+              <h3>Complex Example</h3>
+              <div class="examples">
+                <strong>Loop with If-Else:</strong><br />
+                <code>chalao num theke 1 porjonto 10 {</code><br />
+                <code>&nbsp;&nbsp;jodi num == 5 {</code><br />
+                <code>&nbsp;&nbsp;&nbsp;&nbsp;lekh "Found five!"</code><br />
+                <code>&nbsp;&nbsp;} nahole {</code><br />
+                <code>&nbsp;&nbsp;&nbsp;&nbsp;lekh num</code><br />
+                <code>&nbsp;&nbsp;}</code><br />
+                <code>}</code>
+              </div>
+            </div>
+     
+            <div class="syntax-section">
               <h3>Supported Data Types</h3>
               <ul>
                 <li><strong>Numbers:</strong> <code>10, 25, 100</code></li>
@@ -64,6 +110,12 @@
                 <li><code>-</code> Subtraction</li>
                 <li><code>*</code> Multiplication</li>
                 <li><code>/</code> Division</li>
+                <li><code>==</code> Equal to</li>
+                <li><code>!=</code> Not equal to</li>
+                <li><code>&lt;</code> Less than</li>
+                <li><code>&gt;</code> Greater than</li>
+                <li><code>&lt;=</code> Less than or equal</li>
+                <li><code>&gt;=</code> Greater than or equal</li>
               </ul>
             </div>
           </div>
@@ -76,15 +128,19 @@
               id="codeInput"
               placeholder='Write your code here...
 
-Example:
-eta x = 10
-eta y = 20
-eta sum = x + y
-eta message = "Hello World"
+Example with loops and conditions:
+eta limit = 5
 
-lekh sum
-lekh "The result is:"
-lekh message'
+lekh "Counting and checking numbers:"
+
+chalao i theke 1 porjonto limit {
+  jodi i == 3 {
+    lekh "Found three!"
+  } nahole {
+    lekh "Number:"
+    lekh i
+  }
+}'
             ></textarea>
 
             <div class="button-container">
@@ -92,9 +148,20 @@ lekh message'
                 ▶️ Run Code
               </button>
               <button onclick="clearCode()" class="clear-btn">🗑️ Clear</button>
-              <button onclick="runExample()" class="example-btn">
-                📝 Load Example
-              </button>
+              <div class="example-buttons">
+                <button onclick="runExample('basic')" class="example-btn">
+                  📝 Basic Example
+                </button>
+                <button onclick="runExample('condition')" class="example-btn">
+                  🔀 If-Else Example
+                </button>
+                <button onclick="runExample('chalao')" class="example-btn">
+                  🔄 Loop Example
+                </button>
+                <button onclick="runExample('complex')" class="example-btn">
+                  🚀 Complex Example
+                </button>
+              </div>
             </div>
           </div>
 
@@ -102,6 +169,13 @@ lekh message'
             <h2>📤 Output</h2>
             <div id="output" class="output-display">
               Click "Run Code" to see the output here...
+            </div>
+          </div>
+
+          <div class="js-output-section">
+            <h2>🔧 Generated JavaScript</h2>
+            <div id="jsOutput" class="js-output-display">
+              Generated JavaScript will appear here...
             </div>
           </div>
         </div>
