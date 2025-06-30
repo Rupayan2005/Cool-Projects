@@ -7,12 +7,16 @@ Welcome to a small collection of fun and experimental projects exploring artific
 ### 1️⃣ AI Girlfriend 💬🤖
 A browser-based virtual assistant designed with personality and interactivity in mind. Built using **HTML**, **CSS**, and **JavaScript**, this project demonstrates basic AI-like behavior in a conversational UI.
 
+Check it out here ---  (https://rupayan2005.github.io/Cool-Projects/AI%20Girlfriend/)
+
 > 💡 *Think of it as a creative take on chat-based companionship, ideal for exploring front-end development with a twist of artificial intelligence.*
 
 ---
 
 ### 2️⃣ My Own Programming Language 🌐🧪
 An experimental attempt to create a **mini programming language** using **JavaScript**. While still in its early stages and covering only fundamental aspects, it’s a great starting point to understand interpreters and how languages are structured.
+
+Check it out here ---  (https://rupayan2005.github.io/Cool-Projects/My%20Language/)
 
 > ⚙️ *It’s a fun sandbox to learn how tokens, parsers, and evaluators work behind the scenes.*
 
