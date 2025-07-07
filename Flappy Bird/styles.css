@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #87CEEB 0%, #98FB98 100%);
+    font-family: 'Arial', sans-serif;
+}
+
+#gameContainer {
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+#canvas-wrapper {
+    background-image: url("./flappybirdbg.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+#board {
+    display: block;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#instructions {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+#instructions.show {
+    opacity: 1;
+}
+
+.game-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #FFD700;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+}
+
+.controls {
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    #gameContainer {
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    #board {
+        border-radius: 0;
+    }
+    
+    .game-title {
+        font-size: 28px;
+    }
+    
+    #instructions {
+        font-size: 20px;
+    }
+    
+    .controls {
+        font-size: 16px;
+    }
+}
