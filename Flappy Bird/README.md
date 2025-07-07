@@ -53,7 +53,7 @@ cd Flappy Bird
 ```
 flappy-bird-game/
 ├── 📄 index.html          # Main HTML structure
-├── 🎨 style.css           # Styling and animations
+├── 🎨 styles.css           # Styling and animations
 ├── ⚡ script.js           # Game logic and mechanics
 ├── 🖼️ images/             # Visual assets
 │   ├── flappybird.png

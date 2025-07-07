@@ -23,6 +23,17 @@ An experimental attempt to create a **mini programming language** using **JavaSc
 
 ---
 
+---
+## 🎮 2️⃣ Flappy Bird Game – JavaScript Canvas
+
+A **JavaScript-powered** recreation of the iconic **Flappy Bird** game built using the **HTML5 Canvas API**.  
+This project features smooth animation, polished physics, particle effects, and basic audio — all without using any external game engine.
+
+[👉 Play the Game](https://rupayan2005.github.io/Cool-Projects/Flappy%20Bird/)
+
+> 🎨 *A hands-on project to explore game development fundamentals like animation loops, collision detection, input handling, and real-time rendering using pure JavaScript.*
+---
+
 ## 📚 More Coming Soon!
 
 Stay tuned for more cool and creative mini-projects. Follow along as this collection grows with experiments in AI, web development, and beyond. 🌱💻
