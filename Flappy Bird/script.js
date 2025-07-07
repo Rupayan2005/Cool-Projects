@@ -324,15 +324,18 @@ function update() {
   if (!gameStarted || gameOver) return;
 
   // Smooth bird physics
-  bird.velocityY += GRAVITY;
-  bird.y = Math.max(bird.y + bird.velocityY, 0);
+  const gravityForce = GRAVITY * (deltaTime / 16.67);
+  bird.velocityY += gravityForce;
+  bird.y = Math.max(bird.y + bird.velocityY * (deltaTime / 16.67), 0);
 
   // Smooth bird rotation
-  bird.rotation += (bird.targetRotation - bird.rotation) * 0.15;
+  bird.rotation +=
+    (bird.targetRotation - bird.rotation) * 0.15 * (deltaTime / 16.67);
   bird.targetRotation = Math.min(bird.velocityY * 3, 90);
 
   // Smooth bird scaling
-  bird.scale += (bird.targetScale - bird.scale) * 0.1;
+  bird.scale += (bird.targetScale - bird.scale) * 0.1 * (deltaTime / 16.67);
+
   bird.targetScale = 1;
 
   // Update bird trail
@@ -416,8 +419,9 @@ function update() {
 function updateBirdTrail() {
   for (let i = bird.trail.length - 1; i >= 0; i--) {
     let trail = bird.trail[i];
-    trail.life -= 0.05;
-    trail.size *= 0.95;
+    const decay = 0.05 * (deltaTime / 16.67);
+    trail.life -= decay;
+    trail.size *= Math.pow(0.95, deltaTime / 16.67);
 
     if (trail.life <= 0) {
       bird.trail.splice(i, 1);
@@ -725,8 +729,8 @@ function updateParticles() {
     particle.y += particle.vy;
     particle.vy += 0.2; // Gravity
     particle.vx *= 0.99; // Air resistance
-    particle.life -= particle.decay;
-    particle.size *= 0.98;
+    particle.life -= particle.decay * (deltaTime / 16.67);
+    particle.size *= Math.pow(0.98, deltaTime / 16.67);
 
     if (particle.life <= 0 || particle.size <= 0.5) {
       particles.splice(i, 1);
