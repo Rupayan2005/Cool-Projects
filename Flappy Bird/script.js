@@ -111,21 +111,21 @@ function loadImages() {
     imagesLoaded++;
     checkImagesLoaded();
   };
-  birdImg.src = "./flappybird.png";
+  birdImg.src = "./image/flappybird.png";
 
   topPipeImg = new Image();
   topPipeImg.onload = () => {
     imagesLoaded++;
     checkImagesLoaded();
   };
-  topPipeImg.src = "./toppipe.png";
+  topPipeImg.src = "./image/toppipe.png";
 
   bottomPipeImg = new Image();
   bottomPipeImg.onload = () => {
     imagesLoaded++;
     checkImagesLoaded();
   };
-  bottomPipeImg.src = "./bottompipe.png";
+  bottomPipeImg.src = "./image/bottompipe.png";
 
   // ✅ Load background image
   backgroundImg = new Image();
@@ -133,7 +133,7 @@ function loadImages() {
     imagesLoaded++;
     checkImagesLoaded();
   };
-  backgroundImg.src = "./flappybirdbg.png";
+  backgroundImg.src = "./image/flappybirdbg.png";
 
   totalImages = 4; // ✅ Update total images
 }
