@@ -30,8 +30,6 @@
 ### 🔊 **Audio Experience**
 - **Wing Flap Sounds** - Satisfying audio feedback
 - **Score Chimes** - Rewarding sound when passing pipes
-- **Collision Effects** - Dramatic crash sounds
-- **Background Music** - Optional ambient soundtrack
 
 ### 🏆 **Game Features**
 - **High Score System** - Persistent local storage
