@@ -1,3 +1,4 @@
+/* 🌐 Base Styles */
 body {
     margin: 0;
     padding: 0;
@@ -14,6 +15,9 @@ body {
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
     overflow: hidden;
+    max-width: 100%;
+    width: 100%;
+    max-height: 100vh;
 }
 
 #canvas-wrapper {
@@ -21,13 +25,20 @@ body {
     background-size: cover;
     background-position: center;
     border-radius: 20px;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 #board {
     display: block;
     border-radius: 20px;
     cursor: pointer;
+    width: 100%;
+    height: auto;
+    max-width: 460px;
+    aspect-ratio: 460 / 640;
 }
 
 #instructions {
@@ -37,7 +48,7 @@ body {
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    font-size: 24px;
+    font-size: clamp(18px, 4vw, 24px);
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     z-index: 10;
@@ -51,38 +62,37 @@ body {
 }
 
 .game-title {
-    font-size: 36px;
+    font-size: clamp(24px, 5vw, 36px);
     margin-bottom: 20px;
     color: #FFD700;
     text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
 }
 
 .controls {
-    font-size: 18px;
+    font-size: clamp(14px, 3vw, 18px);
     margin-top: 20px;
     line-height: 1.6;
 }
 
-/* Responsive design */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     #gameContainer {
         border-radius: 0;
         box-shadow: none;
     }
-    
+
+    #canvas-wrapper,
     #board {
         border-radius: 0;
     }
-    
-    .game-title {
-        font-size: 28px;
+}
+
+@media (min-width: 601px) {
+    #gameContainer {
+        width: 90vw;
+        max-width: 500px;
     }
-    
-    #instructions {
-        font-size: 20px;
-    }
-    
-    .controls {
-        font-size: 16px;
+
+    #board {
+        max-width: 100%;
     }
 }
