@@ -256,7 +256,7 @@ function jump() {
   addParticles(bird.x + bird.width / 2, bird.y + bird.height / 2, "#FFD700", 6);
 
   // Camera shake effect
-  addCameraShake(2, 100);
+  //  addCameraShake(2, 100);
 }
 
 function resetGame() {
@@ -350,7 +350,7 @@ function update() {
       "#FF4444",
       12
     );
-    addCameraShake(5, 200);
+    // addCameraShake(5, 200);
     if (sounds.hit) sounds.hit();
   }
 
@@ -379,7 +379,7 @@ function update() {
         "#FF4444",
         15
       );
-      addCameraShake(8, 300);
+      // addCameraShake(8, 300);
       if (sounds.hit) sounds.hit();
     }
 
@@ -395,7 +395,7 @@ function update() {
           "#00FF88",
           8
         );
-        addCameraShake(1, 50);
+        // addCameraShake(1, 50);
         if (sounds.score) sounds.score();
       }
     }
