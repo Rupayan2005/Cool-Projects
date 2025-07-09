@@ -9,7 +9,7 @@ const GRAVITY = 0.4;
 const JUMP_VELOCITY = -6.5;
 const PIPE_VELOCITY = -2.5;
 const PIPE_SPACING = 1300;
-const PIPE_GAP = BOARD_HEIGHT / 3.8;
+// const PIPE_GAP = BOARD_HEIGHT / 3.8;
 
 // Game state
 let board, context;
@@ -56,6 +56,11 @@ let sounds = {};
 let fps = 60;
 let fpsCounter = 0;
 let fpsTime = 0;
+
+function getPipeGap() {
+    return BOARD_HEIGHT / (3.8 + Math.min(score / 30, 2)); // Gap tightens with score
+}
+
 
 // Animation easing functions
 const easing = {
@@ -679,7 +684,7 @@ function createPipe() {
   pipes.push({
     img: bottomPipeImg,
     x: BOARD_WIDTH,
-    y: randomPipeY + PIPE_HEIGHT + PIPE_GAP,
+    y: randomPipeY + PIPE_HEIGHT + getPipeGap(),
     width: PIPE_WIDTH,
     height: PIPE_HEIGHT,
     passed: false,
