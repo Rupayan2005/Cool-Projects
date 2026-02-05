@@ -1,4 +1,4 @@
-# 💖 AI Girlfriend Chat App
+# 💖SoulSync - AI Girlfriend Chat App
 
 Meet **    ARIA    ** — your personal virtual companion built with 💡 **HTML**, 🎨 **CSS**, and ⚙️ **JavaScript**, powered by **Google Gemini API** and voice recognition tech! 🧠🗣️
 
